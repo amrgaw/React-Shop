@@ -36,7 +36,7 @@ export default function Cart() {
               >
                 <img className="col-2" src={e.image} alt="" />
                 <h5 className=" col-4">{e.title}</h5>
-                <h5 className="col-1">{e.price}</h5>
+                <h5 className="col-1">{e.price *e.count}</h5>
                 <div className="d-flex gap-3 col-2 align-items-center ms-2 me-5">
                   <button disabled={e.count <=1} prod-id={e.id}  onClick={() => decreaseProduct(e.id)} className="btn btn-primary">
                     -
