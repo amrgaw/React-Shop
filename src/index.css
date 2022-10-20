@@ -48,3 +48,19 @@ a {
 .product-archive button {
   margin-top: auto;
 }
+
+form {
+  max-width: 700px;
+  margin-inline: auto;
+}
+form > input, form >  select {
+height: 40px;
+border-radius: 5px;
+padding: 10px;
+border: 1px solid grey;
+ margin: 10px 0px !important;
+}
+
+form > p{
+  color: red;
+}

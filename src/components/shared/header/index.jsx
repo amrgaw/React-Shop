@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 export default function Header(params) {
   const count = useSelector((state) => state.counter.value);
 
-
   return (
     <nav
       className=" bg-secondary
@@ -17,6 +16,11 @@ export default function Header(params) {
         </Link>
         <link rel="stylesheet" href="" />
         <ul className="d-flex mb-0 gap-4">
+          <li>
+            <Link to="/register" className=" text-decoration-none">
+              <p>Register</p>
+            </Link>
+          </li>
           <li>
             <Link to="/about-us" className=" text-decoration-none">
               <p>About Us</p>

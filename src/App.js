@@ -7,13 +7,13 @@ import { useState } from "react";
 import AboutUs from "./components/about";
 import ContactUs from "./components/contact";
 import Cart from "./components/cart";
+import Register from "./components/register";
 
 function App() {
   const [count, countVal] = useState(0);
   function CounterInrease() {
     countVal(count + 1);
   }
-
   return (
     <BrowserRouter className="App">
       <Header count={count} />
@@ -23,6 +23,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/register" element={<Register/>} />
       </Routes>
     </BrowserRouter>
   );
