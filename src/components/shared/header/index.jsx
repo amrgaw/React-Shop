@@ -22,6 +22,11 @@ export default function Header(params) {
             </Link>
           </li>
           <li>
+            <Link to="/login" className=" text-decoration-none">
+              <p>Login</p>
+            </Link>
+          </li>
+          <li>
             <Link to="/about-us" className=" text-decoration-none">
               <p>About Us</p>
             </Link>
