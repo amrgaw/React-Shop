@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { object } from "yup";
 import { AddToCart } from "../../../redux/counterSlice";
 
 export default function ProductsArchive() {
@@ -57,6 +58,9 @@ export default function ProductsArchive() {
                   <h4>{prod.price} EGP</h4>
                   <button
                     onClick={(e) => addTOCart(e)}
+                    disabled={
+                      !Object.is(...cartList.filter((e) => e.id == prod.id))
+                    }
                     prod-id={prod.id}
                     type="button"
                     class="btn btn-primary"
