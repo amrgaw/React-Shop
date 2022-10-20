@@ -5,7 +5,7 @@ import * as yup from "yup";
 const schema = yup
   .object({
     username: yup.string().required("this feild is require"),
-    password: yup.string().required("please enter a valid password"),
+    password: yup.string().min(8).required("please enter a valid password"),
   })
   .required();
 

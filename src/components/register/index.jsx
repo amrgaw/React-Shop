@@ -7,7 +7,7 @@ const schema = yup
     username: yup.string().required("this feild is require"),
     email: yup.string().email().required(),
     phone: yup.number().positive(),
-    password: yup.string().required("please enter a valid password"),
+    password: yup.string().min(8).required("please enter a valid password"),
     confpassword: yup.string().oneOf([yup.ref("password"), null]),
     gender: yup.string(),
     agree: yup.string().matches("agree").required("you must agree for tearms"),
@@ -63,7 +63,7 @@ export default function App() {
       </div>
       <p>{errors.agree && "please confirm accept"}</p>
 
-      <input type="submit" />
+      <input className="btn btn-primary" type="submit" />
     </form>
   );
 }

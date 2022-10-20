@@ -7,8 +7,9 @@ import { AddToCart } from "../../../redux/counterSlice";
 export default function ProductsArchive() {
   const [products, setProducts] = useState([]);
   const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
+  const cartList = useSelector((state) => state.counter.cartList);
 
+  const dispatch = useDispatch();
   function addTOCart(id) {
     id = id.target.getAttribute("prod-id");
     let prod;
