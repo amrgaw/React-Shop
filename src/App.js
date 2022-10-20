@@ -8,6 +8,7 @@ import AboutUs from "./components/about";
 import ContactUs from "./components/contact";
 import Cart from "./components/cart";
 import Register from "./components/register";
+import Login from "./components/login";
 
 function App() {
   const [count, countVal] = useState(0);
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/register" element={<Register/>} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
     </BrowserRouter>
   );
